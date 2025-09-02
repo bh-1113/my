@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>글 목록</title>
+<style>
+/* index.html 스타일과 동일 - 생략 가능 */
+</style>
+</head>
+<body>
+<header>
+<h1>글 목록</h1>
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+</header>
+
+<nav>
+<a href="index.html">홈</a>
+<a href="posts.html">글 목록</a>
+<a href="about.html">소개</a>
+</nav>
+
+<div class="container">
+<h2>최근 글</h2>
+<ul>
+<li><a href="index.html">AI 시대를 살아가는 방법</a></li>
+<li><a href="#">AI와 교육의 미래 (준비중)</a></li>
+<li><a href="#">AI 윤리와 책임 (준비중)</a></li>
+</ul>
+</div>
+
+<footer>© 2025 AI 블로그</footer>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+  document.querySelector(".dark-toggle").textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+}
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach(link => { if(link.href === location.href) link.classList.add("active"); });
+</script>
+</body>
+</html>
