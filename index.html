@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 시대를 살아가는 방법</title>
+  <style>
+    body {
+      font-family: "Noto Sans KR", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    nav {
+      background: #357ABD;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+    h2 {
+      color: #4a90e2;
+      margin-top: 20px;
+    }
+    p {
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #eee;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #666;
+      transition: background 0.3s, color 0.3s;
+    }
+    /* 다크모드 스타일 */
+    body.dark {
+      background: #1e1e1e;
+      color: #ddd;
+    }
+    body.dark .container {
+      background: #2c2c2c;
+      color: #ddd;
+    }
+    body.dark footer {
+      background: #2c2c2c;
+      color: #aaa;
+    }
+    body.dark nav {
+      background: #222;
+    }
+    body.dark nav a {
+      color: #ddd;
+    }
+    body.dark nav a:hover {
+      color: #FFD700;
+    }
+    /* 다크모드 버튼 */
+    .dark-toggle {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      background: white;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 1.2em;
+      transition: background 0.3s;
+    }
+    .dark-toggle:hover {
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI 시대를 살아가는 방법</h1>
+    <p>인공지능과 함께 성장하는 우리의 이야기</p>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+  </header>
+
+  <nav>
+    <a href="index.html">홈</a>
+    <a href="posts.html">글 목록</a>
+    <a href="about.html">소개</a>
+  </nav>
+  
+  <div class="container">
+    <h2>1. AI 이해하기</h2>
+    <p>AI가 무엇인지, 어떤 원리로 동작하는지 기초적인 이해를 갖추는 것이 중요합니다. 
+       단순히 사용하는 것을 넘어 비판적으로 바라보는 시각이 필요합니다.</p>
+
+    <h2>2. 평생 학습의 태도</h2>
+    <p>기술은 빠르게 변화합니다. 새로운 도구와 방법을 배우는 것을 두려워하지 않고, 
+       꾸준히 학습하는 자세가 AI 시대의 핵심 역량입니다.</p>
+
+    <h2>3. 사람만의 강점 찾기</h2>
+    <p>창의성, 공감 능력, 윤리적 판단은 AI가 대체하기 어려운 인간 고유의 영역입니다. 
+       나만의 강점을 발견하고 발전시키는 것이 필요합니다.</p>
+
+    <h2>4. AI와 협업하기</h2>
+    <p>AI는 경쟁자가 아니라 협력자일 수 있습니다. 업무와 생활 속에서 AI를 도구로 활용해 
+       더 나은 성과를 만들어 나가는 것이 지혜로운 방법입니다.</p>
+  </div>
+
+  <footer>
+    © 2025 AI 블로그 | 모두가 함께 배우는 AI 시대
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      const button = document.querySelector(".dark-toggle");
+      button.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+  </script>
+</body>
+</html>
